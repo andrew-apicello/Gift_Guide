@@ -1,42 +1,113 @@
 <!DOCTYPE HTML>
 <html lang ="en">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="description" content="Welcome Developers to the Guys Gift Guide!" />
-		<!-- How search engines should index your content -->
-		<meta name="keywords" content="gifts, guides,gift guides,guy,guys,bro,bros,freinds,friend,husband,brother,son,boyfriend,boyfriends,gifts for my boyfriend,gifts for boyfriends,gifts christmas,christmas,gifts day,gifts,birthday,birthday,christmas,personalized gifts,gifts and collectibles,unique gifts,hot gifts,hot,men gifts,men,man,boy,father,father's day,fathers day,gadget gifts,gadget,him, him gifts,ideas gifts,gag gifts,free gifts,gift ideas, best gifts, best gifts 2017, best gifts 2018,fiance,husband,fiance gifts,husband gifts,actually want,piano,guitar,guitar gifts, musician,music"/>
-		<meta name="gifts" content="index,follow">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description" content="Welcome Developers to the Guys Gift Guide!" />
+	<!-- How search engines should index your content -->
+	<meta name="keywords" content="gifts, guides,gift guides,guy,guys,bro,bros,freinds,friend,husband,brother,son,boyfriend,boyfriends,gifts for my boyfriend,gifts for boyfriends,gifts christmas,christmas,gifts day,gifts,birthday,birthday,christmas,personalized gifts,gifts and collectibles,unique gifts,hot gifts,hot,men gifts,men,man,boy,father,father's day,fathers day,gadget gifts,gadget,him, him gifts,ideas gifts,gag gifts,free gifts,gift ideas, best gifts, best gifts 2017, best gifts 2018,fiance,husband,fiance gifts,husband gifts,actually want,piano,guitar,guitar gifts, musician,music"/>
+	<meta name="gifts" content="index,follow">
 
-		<!-- Link to other files-->
-		<script src="G3_HOME_JS.js"></script>
-		<link rel="stylesheet" type="text/css" href="G3_CSS.css"/>
+	<!-- Link to other files-->
+	<script src="Home/G3_HOME_JS.js"></script>
+	<link rel="stylesheet" type="text/css" href="Home/G3_CSS.css"/>
 
-		<!-- define default source for all links on page -->
-		<base href="G3_HOME.html"/>
-		<link rel="icon" href="favicon.ico"/>
-		<meta name="author" content="Andrew Apicello"/>	
-		<title>Guitarist Gift Guide</title>
-		<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-	</head>
+	<!-- define default source for all links on page -->
+	<base href="G3_HOME.html"/>
+	<link rel="icon" href="Images/favicon.ico"/>
+	<meta name="author" content="Andrew Apicello"/>	
+	<title>Guitarist Gift Guide</title>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-	<body>
-		<header>
-			<nav>
-				<ul>
-				  <li><a href="G3_HOME.html">Home</a></li>
-				  <li><a href="G3_MUSIC.html">Music</a></li>
-				  <li><a href="G3_CLOTHES.html">Clothes</a></li>
-				  <li><a href="G3_FURNITURE.html">Furniture</a></li>
-				  <li><a href="G3_CONTACT.html">Contact Us</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="Home/G3_HOME.html">Home</a></li>
+				<li><a href="Music/G3_MUSIC.html">Music</a></li>
+				<li><a href="G3_CLOTHES.html">Clothes</a></li>
+				<li><a href="G3_FURNITURE.html">Furniture</a></li>
+				<li><a href="G3_CONTACT.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div>
+			<h1 class="top-header">
+				Make him smile.
+			</h1>
+
+
 			<div>
-				<h1 class="top-header">
-					Make him smile.
-				</h1>
+				<h2>Featured Products</h2>
+
 			</div>
-		</main>
-	</body>
+
+
+
+			<script type="text/javascript">
+
+
+				var associateId = "guitaristgift-20";
+				var accessKey = "AKIAJV2CUWK7ODCS5QVQ";
+				var secretId = "zgy6kIQXvr2IWDTeHgJ7NAO9J6te5OTY4ITie8MR";
+
+				var d = new Date();
+				console.log(d);
+				var year = d.getFullYear();
+				var month = d.getMonth();
+				if (month < 10){
+					month = "0" + String(month)
+				}
+				var date = d.getDate();
+				if (date < 10){
+					date = "0" + String(date)
+				}
+				var hours = d.getHours();
+				if (hours < 10){
+					hours = "0" + String(hours)
+				}
+				var minutes = d.getMinutes();
+				if (minutes < 10){
+					minutes = "0" + String(minutes)
+				}
+				var seconds = d.getSeconds();
+				if (seconds < 10){
+					seconds = "0" + String(seconds)
+				}
+
+	// YYYY-MM-DDThh:mm:ssZ
+
+
+	var dateTime = year + "-" + "09" + "-" + date + "T" + hours + ":" + minutes + ":" + seconds + "-05:00"
+
+	console.log(dateTime);
+
+	var myUrl = "http://webservices.amazon.com/onca/xml?AWSAccessKeyId=AKIAJV2CUWK7ODCS5QVQ&AssociateTag=guitaristgift-20&Keywords=Electric%20GUitar&Operation=ItemSearch&ResponseGroup=Images%2CItemAttributes%2COffers&SearchIndex=MusicalInstruments&Service=AWSECommerceService&Timestamp=2017-09-09T01%3A54%3A21.000Z&Signature=T%2BEYqX1KOShdEtTx6xj%2Bv8qao4QLG6Wp4s1WKKiT5yI%3D";
+
+	console.log(myUrl)
+
+	$.ajax({
+		url: myUrl,
+		method: "GET",
+		dataType: "xml"
+	}).done(function(response){
+
+		console.log(resonse);
+	});
+
+
+// var xhttp = new XMLHttpRequest();
+// xhttp.open("GET", myUrl, true);
+// xhttp.send();
+
+
+
+
+
+</script>
+</div>
+</main>
+</body>
 </html>
