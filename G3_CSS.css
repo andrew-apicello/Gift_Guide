@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding:0;
+}
+html, body {
+    height:100%;
+} 
+
+body{
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+	background-image: url("Gift_Guide/Images/last-minute-gifts-guys-actually-want.jpeg");
+	background-attachment: fixed;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: height: 100% width: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+img {
+    padding-top: 45px;
+    position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/*----- Horizontal List for Heading -----*/
+ul {
+    list-style-type: none; 	/*removes bullets*/
+    margin: 0;				/*removes browser default settings*/
+    padding: 0;				/*removes browser default settings*/
+    overflow: hidden;
+    position: center;
+    background-color: #3f3f39;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li{
+	float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 1px 1px 2px gray;
+    }
+
+li a:hover {
+    background-color: #b0e4fc;
+}
+
+
+/*-----  End Heading Section -----*/
+
+
+.top-header{
+	color: white;
+	font-size: 900%;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+    font-style: bold;
+	font-family: 'Dancing Script', cursive;
+	text-shadow: 1px 1px 2px gray;
+	margin: 430px auto auto auto;
+}
